@@ -26,6 +26,8 @@ import styles from "./Header.module.scss";
 import images from "../../../../assets/images";
 import AccountItem from "../../../AccountItem";
 import Menu from "../../../Popper/Menu";
+import { UploadIcon } from "../../../Icons";
+import Image from "../../../Image";
 
 const cx = classNames.bind(styles);
 
@@ -147,6 +149,9 @@ function Header() {
                   <FontAwesomeIcon icon={faCloudUpload} />
                 </button>
               </Tippy>
+              <button className={cx("action-btn")}>
+                <UploadIcon />
+              </button>
             </>
           ) : (
             <>
@@ -158,7 +163,12 @@ function Header() {
           )}
           <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
             {currentUser ? (
-              <img className={cx("user-avatar")} src="https://s.net.vn/vm6C" alt="WanF" />
+              <Image
+                className={cx("user-avatar")}
+                src="https://s.net.vn/vm6C"
+                alt="WanF"
+                fallback="https://fullstack.edu.vn/static/media/f8-icon.18cd71cfcfa33566a22b.png"
+              />
             ) : (
               <button className={cx("more-btn")}>
                 <FontAwesomeIcon icon={faEllipsisVertical} />
