@@ -1,4 +1,4 @@
-import routesConfig from "../config/routes";
+import config from "../config";
 
 // Layouts
 import { HeaderOnly } from "../components/Layout";
@@ -12,24 +12,24 @@ import Search from "../pages/Search";
 // Public routes
 const publicRoutes = [
   {
-    path: routesConfig.home,
+    path: config.routes.home,
     component: Home,
   },
   {
-    path: routesConfig.following,
+    path: config.routes.following,
     component: Following,
   },
   {
-    path: routesConfig.Profile,
+    path: config.routes.Profile,
     component: Profile,
   },
   {
-    path: routesConfig.Upload,
+    path: config.routes.Upload,
     component: Upload,
     layout: HeaderOnly,
   },
   {
-    path: routesConfig.Search,
+    path: config.routes.Search,
     component: Search,
     layout: null,
   },

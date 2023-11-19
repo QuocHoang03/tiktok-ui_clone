@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import HeadlessTippy from "@tippyjs/react/headless";
 import classNames from "classnames/bind";
 
-import * as searchServices from "../../../../apiServices/searchServices";
+import * as searchServices from "../../../../services/searchServices";
 import { Wrapper as PopperWrapper } from "../../../Popper";
 import AccountItem from "../../../AccountItem";
 import { useDebounce } from "../../../../hooks";
@@ -70,7 +70,7 @@ function Search() {
           return (
             <div className={cx("search-result")} tabIndex="-1" {...attrs}>
               <PopperWrapper>
-                <h4 className={cx("search-title")}>Accoutns</h4>
+                <h4 className={cx("search-title")}>Accounts</h4>
                 {searchResult.map((result) => (
                   <AccountItem key={result.id} data={result} />
                 ))}
